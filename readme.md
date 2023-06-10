@@ -1,0 +1,1 @@
+# This repo contains basic jaavscript code snipppets
