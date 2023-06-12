@@ -99,5 +99,34 @@ var intersection = function(nums1, nums2) {
 
   return res;
 };
+// Leetcode: 58. Length of Last Word
+
+var lengthOfLastWord = function(s) {
+  if(!s) {
+      return 0;
+  }
+  const res =  s.trim().split(" ");
+  const lastWord =  res[res.length-1];
+  return lastWord.length;
+};
+
+// Leetcode: 268. Missing Number
+
+var missingNumber = function(nums) {
+
+  if(nums.length < 1 ) {
+      return 0;
+  } 
+
+ const max = nums.length;
+ const totalSum = (max * (max +1)) /2;
+ let rangeSum = 0;
+ for(let i = 0; i<nums.length; i++) {
+    rangeSum = rangeSum + nums[i];
+ }
+ const res = totalSum - rangeSum;
+ return res;
+   
+};
 
 
